@@ -1,4 +1,5 @@
 module.exports = app => {
-    app.get('/comics',  (req, res) => res.send(' Events, Olá Mundo'))
-   
+    app.get('/events',  (req, res) => res.send(' Events, Olá Mundo'))
+    app.post('/events',  (req, res) =>{
+        res.send('VocÊ esta fazendo um post')})
 }

@@ -1,6 +1,6 @@
 const custonExpress = require('./config/custonExpress.js')
-
 const app = custonExpress()
+const porta = 3000
 
-app.listen(3000, ()=> console.log("Servidor rodando"))
+app.listen(porta, ()=> console.log("Servidor rodando"))
 
