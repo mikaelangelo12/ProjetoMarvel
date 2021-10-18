@@ -1,21 +1,23 @@
-<nav mat-tab-nav-bar>
-    <a  mat-tab-link
-          (click)= "goComics()">{{conteudoComics}}
-    </a>
-    <a  mat-tab-link
-          (click)= "  goEvents()">{{conteudoEvents}}
-    </a>
-    <a mat-tab-link
-        (click)="goPersonagens()">{{conteudoPersonagens}}
-    </a>
-    <a mat-tab-link
-       (click)="goSeries()">{{conteudoSeries}}
-    </a>
-    <a mat-tab-link
-        (click)="goStories()">{{conteudoStories}}
-    </a>
+<div class="container">
+    <nav  mat-tab-nav-bar>
+        <a  mat-tab-link
+            (click)= "goComics()">{{conteudoComics}}
+        </a>
+        <a  mat-tab-link
+            (click)= "  goEvents()">{{conteudoEvents}}
+        </a>
+        <a mat-tab-link
+            (click)="goPersonagens()">{{conteudoPersonagens}}
+        </a>
+        <a mat-tab-link
+        (click)="goSeries()">{{conteudoSeries}}
+        </a>
+        <a mat-tab-link
+            (click)="goStories()">{{conteudoStories}}
+        </a>
 
-  </nav>
+    </nav>
+</div>
 <router-outlet></router-outlet>
 
 
