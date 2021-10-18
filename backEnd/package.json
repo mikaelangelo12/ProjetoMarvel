@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mikael Angelo",
+  "description": "api Marvel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelangelo12/ProjetoMarvel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikaelangelo12/ProjetoMarvel/issues"
+  },
+  "homepage": "https://github.com/mikaelangelo12/ProjetoMarvel#readme"
+}
