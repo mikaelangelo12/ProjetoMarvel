@@ -1,11 +1,6 @@
-const express = require('express')
-const { json } = require('express')
+const custonExpress = require('./config/custonExpress.js')
 
-const app = express()
+const app = custonExpress()
 
-app.use(json())
-app.listen(3000)
+app.listen(3000, ()=> console.log("Servidor rodando"))
 
-app.get('/', async(req, res) =>{
-    res.send("Olá Mundo")
-})
