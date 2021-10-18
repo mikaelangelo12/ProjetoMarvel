@@ -3,8 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderFooterModule } from './header-footer/header-footer.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HeaderFooterModule } from './header-footer/header-footer.module';
+import { PagesModule } from './pages/pages.module';
+
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -14,7 +22,13 @@ import { HeaderFooterModule } from './header-footer/header-footer.module';
   imports: [
     BrowserModule,
     HeaderFooterModule,
-    AppRoutingModule
+    PagesModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTabsModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

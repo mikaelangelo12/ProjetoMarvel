@@ -1,1 +1,21 @@
-<p>pages works!</p>
+<nav mat-tab-nav-bar>
+    <a  mat-tab-link
+          (click)= "goComics()">{{conteudoComics}}
+    </a>
+    <a  mat-tab-link
+          (click)= "  goEvents()">{{conteudoEvents}}
+    </a>
+    <a mat-tab-link
+        (click)="goPersonagens()">{{conteudoPersonagens}}
+    </a>
+    <a mat-tab-link
+       (click)="goSeries()">{{conteudoSeries}}
+    </a>
+    <a mat-tab-link
+        (click)="goStories()">{{conteudoStories}}
+    </a>
+
+  </nav>
+<router-outlet></router-outlet>
+
+
