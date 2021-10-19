@@ -13,7 +13,8 @@ export class PagesComponent implements OnInit {
   conteudoPersonagens = "Personagens"
   conteudoSeries = "Series"
   conteudoStories = "Stories"
-
+  conteudoCadastroQuadrinhos = "Cadastro de Quadrinhos"
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -34,5 +35,7 @@ export class PagesComponent implements OnInit {
   goStories(){
     this.router.navigate(['stories'])
   }
-
+  goCadastroQuadrinhos(){
+    this.router.navigate(['cadastro-quadrinhos'])
+  }
 }

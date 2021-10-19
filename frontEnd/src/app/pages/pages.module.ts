@@ -6,8 +6,13 @@ import { EventsComponent } from './events/events.component';
 import { SeriesComponent } from './series/series.component';
 import { StoriesComponent } from './stories/stories.component';
 import { PersonagensComponent } from './personagens/personagens.component';
+import { CadastroQuadrinhosComponent } from './cadastro-quadrinhos/cadastro-quadrinhos.component';
 
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,11 +20,17 @@ import { PersonagensComponent } from './personagens/personagens.component';
     EventsComponent,
     SeriesComponent,
     StoriesComponent,
-    PersonagensComponent
+    PersonagensComponent,
+    CadastroQuadrinhosComponent
   ],
   imports: [
     CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTabsModule,
+    MatGridListModule,
+    MatButtonModule
   ],
-  exports:[ComicsComponent, EventsComponent, SeriesComponent, StoriesComponent]
+  exports:[ComicsComponent, EventsComponent, SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]
 })
 export class PagesModule { }
