@@ -14,19 +14,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
-import { ComicsDetalhesComponent } from './comics/comics-detalhes/comics-detalhes.component';
+import { ComicsModule } from './comics/comics.module';
 
 @NgModule({
   declarations: [
-    ComicsComponent,
     EventsComponent,
     SeriesComponent,
     StoriesComponent,
     PersonagensComponent,
-    CadastroQuadrinhosComponent,
-    ComicsDetalhesComponent
+    CadastroQuadrinhosComponent,    
   ],
   imports: [
+    ComicsModule,
     CommonModule,
     MatToolbarModule,
     MatIconModule,
@@ -35,6 +34,6 @@ import { ComicsDetalhesComponent } from './comics/comics-detalhes/comics-detalhe
     MatSelectModule,
     MatButtonModule
   ],
-  exports:[ComicsComponent, EventsComponent, SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]
+  exports:[ EventsComponent, SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]
 })
 export class PagesModule { }

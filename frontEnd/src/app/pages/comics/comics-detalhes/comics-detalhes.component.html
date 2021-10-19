@@ -1,1 +1,14 @@
-<p>comics-detalhes works!</p>
+<div class="container bg">
+  <div *ngIf="comic$ | async as comic" class="descricao">
+  <div class="headerCadastro">
+    <h1><a  (click)="goComics(comic)">{{ comic.title }}</a></h1>
+    <img src="../assets/img/comics.jpg">
+</div>
+
+    <h2 >Mais Detalhe:</h2>  
+    <h3>{{ comic.title }}</h3>
+    <p><img class="img-thumbnail" [src]="" [alt]=""></p> 
+    <button class="button-text" (click)="goComics(comic)">Voltar</button>
+  </div>
+</div>
+  

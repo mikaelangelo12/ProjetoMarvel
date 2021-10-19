@@ -13,7 +13,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ComicsRoutingModule } from './pages/comics/comics-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,8 +31,10 @@ import { ComicsRoutingModule } from './pages/comics/comics-routing.module';
     MatIconModule,
     MatTabsModule,
     MatDialogModule,
-    BrowserAnimationsModule,
-    ComicsRoutingModule
+    HttpClientModule,
+    RouterModule,
+    BrowserAnimationsModule,  
+    FormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

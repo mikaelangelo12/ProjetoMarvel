@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { Comic } from '../comic';
+import { ComicsService } from '../comics.service';
 
 @Component({
   selector: 'app-comics',
@@ -7,9 +12,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComicsComponent implements OnInit {
 
-  constructor() { }
+  url = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg'
+  comics$!: Observable<Comic[]>;
+  selectedId = 0; 
 
-  ngOnInit(): void {
+  constructor( private route: ActivatedRoute, private comicsService: ComicsService ) { }
+
+  ngOnInit() {
+  
+      this.comics$ = this.route.paramMap.pipe(
+        switchMap(params => {
+          this.selectedId = parseInt(params.get('id')!, 10);
+          return this.comicsService.listaComics();
+        })
+      );
   }
 
-}
+  }
+  
+

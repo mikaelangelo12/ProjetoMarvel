@@ -3,3 +3,12 @@
         <h1>Comics</h1>
         <img src="../assets/img/comics.jpg">
     </div>
+    <h2>Lista das Melhores Series</h2>
+        <div *ngFor="let comic of comics$ | async" [class.selected]="comic.id === selectedId">
+          <img class="img-thumbnail" src=" {{comic.thumbnail}}">
+          <a [routerLink]="['/comic', comic.id]">
+            <span class="badge"></span>{{ comic.title }}
+          </a>
+          {{comic.description}}
+          {{comic.modified}}
+        </div>
