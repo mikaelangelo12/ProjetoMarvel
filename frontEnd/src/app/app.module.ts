@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ComicsRoutingModule } from './pages/comics/comics-routing.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatTabsModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ComicsRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

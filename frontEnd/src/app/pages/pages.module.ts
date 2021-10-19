@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ComicsComponent } from './comics/comics.component';
+import { ComicsComponent } from './comics/comics/comics.component';
 import { EventsComponent } from './events/events.component';
 import { SeriesComponent } from './series/series.component';
 import { StoriesComponent } from './stories/stories.component';
@@ -13,6 +13,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import { ComicsDetalhesComponent } from './comics/comics-detalhes/comics-detalhes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
     SeriesComponent,
     StoriesComponent,
     PersonagensComponent,
-    CadastroQuadrinhosComponent
+    CadastroQuadrinhosComponent,
+    ComicsDetalhesComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatTabsModule,
     MatGridListModule,
+    MatSelectModule,
     MatButtonModule
   ],
   exports:[ComicsComponent, EventsComponent, SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]

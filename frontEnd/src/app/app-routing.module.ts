@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroQuadrinhosComponent } from './pages/cadastro-quadrinhos/cadastro-quadrinhos.component';
-import { ComicsComponent } from './pages/comics/comics.component';
+import { ComicsComponent } from './pages/comics/comics/comics.component';
 import { EventsComponent } from './pages/events/events.component';
 import { PersonagensComponent } from './pages/personagens/personagens.component';
 import { SeriesComponent } from './pages/series/series.component';
