@@ -5,7 +5,7 @@
     </div>
     <h2>Lista das Melhores Series</h2>
         <div *ngFor="let comic of comics$ | async" [class.selected]="comic.id === selectedId">
-          <img class="img-thumbnail" src=" {{comic.thumbnail}}">
+          <img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
           <a [routerLink]="['/comic', comic.id]">
             <span class="badge"></span>{{ comic.title }}
           </a>
