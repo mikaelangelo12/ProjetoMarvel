@@ -3,6 +3,6 @@ export interface Comic {
     title: string;
     variantDescription: string;
     description: string;
-    thumbnail: string | number;
+    thumbnail: string;
     modified: string;
   }
