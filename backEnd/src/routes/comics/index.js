@@ -7,6 +7,12 @@ module.exports = app => {
                 console.log(data)
                 return res.json(data)
         })
-      app.post('/api/comics', (req, res) =>{
-                res.send('VocÊ esta fazendo um post')})
+        app.post('/api/comics', (req, res) =>{
+          res.send('Esta rota só faz Get')})
+
+        app.put('/api/comics', (req, res) =>{
+          res.send('Esta rota só faz Get')})
+
+        app.delete('/api/comics', (req, res) =>{
+          res.send('Esta rota só faz Get')})
 }
