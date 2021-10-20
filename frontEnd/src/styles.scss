@@ -3,3 +3,26 @@
 html, body { height: 100%; background-color: #F5FFFA ; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-image: url('./assets/img/bgMarvel.gif');}
 .bg{background-color: #fff;}
+
+.headerPages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+.headerPages h1{
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3em;
+
+}
+.headerPages h2{
+    position: absolute;
+    margin-top: 110px;
+    color:#fff;
+}
+.headerPages img {
+    width: 100%;
+    max-width: 1264px;
+}
