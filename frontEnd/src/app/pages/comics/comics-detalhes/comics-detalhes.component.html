@@ -1,13 +1,24 @@
 <div class="container bg">
-  <div *ngIf="comic$ | async as comic" class="descricao">
-  <div class="headerCadastro">
-    <h1><a  (click)="goComics(comic)">{{ comic.title }}</a></h1>
-    <img src="../assets/img/comics.jpg">
-</div>
-<img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
-
-    <h3>{{ comic.title }}</h3>
-    <button class="button-text" (click)="goComics(comic)">Voltar</button>
-  </div>
-</div>
+      <div *ngIf="comic$ | async as comic" class="descricao">
+            <div class="headerPages">
+                    <h1><a  (click)="goComics(comic)">{{ comic.title }}</a></h1>
+                    <img src="../assets/img/comics.jpg">
+            </div><!--headerPages-->
+            <div class="containerPostDetalhes d-flex">
+                    <div class="thumbConteudoPost">
+                          <img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
+                    </div>
+                    <div class="conteudoPostDetalhes">
+                          <h1>{{ comic.title }}</h1>
+                          <h3>{{comic.variantDescription}}</h3> 
+                          Total de Paginas: {{comic.pageCount}}
+                      <hr/>
+                      {{comic.description}}
+                   
+                      <button class="button-text" (click)="goComics(comic)">Voltar</button>
+                    </div>
+                    
+              </div>
+      </div><!--ngIf-->
+</div><!--container bg-->
   

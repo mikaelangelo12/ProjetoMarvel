@@ -12,7 +12,7 @@ import { ComicsService } from '../comics.service';
 })
 export class ComicsComponent implements OnInit {
 
-  url = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg'
+  
   comics$!: Observable<Comic[]>;
   selectedId = 0; 
 
@@ -22,7 +22,7 @@ export class ComicsComponent implements OnInit {
   
       this.comics$ = this.route.paramMap.pipe(
         switchMap(params => {
-          this.selectedId = parseInt(params.get('id')!, 10);
+          this.selectedId = parseInt(params.get('id')!, 20);
           return this.comicsService.listaComics();
         })
       );

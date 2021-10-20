@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ComicsComponent } from './comics/comics/comics.component';
-import { EventsComponent } from './events/events.component';
-import { SeriesComponent } from './series/series.component';
-import { StoriesComponent } from './stories/stories.component';
-import { PersonagensComponent } from './personagens/personagens.component';
+import { SeriesComponent } from './series/series/series.component';
+import { StoriesComponent } from './stories/stories/stories.component';
+import { PersonagensComponent } from './personagens/personagens/personagens.component';
 import { CadastroQuadrinhosComponent } from './cadastro-quadrinhos/cadastro-quadrinhos.component';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -16,16 +14,24 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import { ComicsModule } from './comics/comics.module';
 
+import { PersonagensDetalhesComponent } from './personagens/personagens-detalhes/personagens-detalhes.component';
+import { SeriesDetalhesComponent } from './series/series-detalhes/series-detalhes.component';
+import { StoriesDetalhesComponent } from './stories/stories-detalhes/stories-detalhes.component';
+import { EventsModule } from './events/events.module';
+
 @NgModule({
-  declarations: [
-    EventsComponent,
+  declarations: [   
     SeriesComponent,
     StoriesComponent,
     PersonagensComponent,
-    CadastroQuadrinhosComponent,    
+    CadastroQuadrinhosComponent,
+    PersonagensDetalhesComponent,
+    SeriesDetalhesComponent,
+    StoriesDetalhesComponent,    
   ],
   imports: [
     ComicsModule,
+    EventsModule,
     CommonModule,
     MatToolbarModule,
     MatIconModule,
@@ -34,6 +40,6 @@ import { ComicsModule } from './comics/comics.module';
     MatSelectModule,
     MatButtonModule
   ],
-  exports:[ EventsComponent, SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]
+  exports:[ SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]
 })
 export class PagesModule { }

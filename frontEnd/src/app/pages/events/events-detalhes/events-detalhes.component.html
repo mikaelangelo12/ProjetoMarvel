@@ -1,0 +1,23 @@
+<div class="container bg">
+    <div *ngIf="eveent$ | async as eveent" class="descricao">
+          <div class="headerPages">
+                  <h1><a  (click)="goEveent(eveent)">{{ eveent.title }}</a></h1>
+                  <img src="../assets/img/events.jpg">
+          </div><!--headerPages-->
+          <div class="containerPostDetalhes d-flex">
+                  <div class="thumbConteudoPost">
+                        <img class="img-thumbnail" src={{eveent.thumbnail.path}}.{{eveent.thumbnail.extension}}>
+                  </div>
+                  <div class="conteudoPostDetalhes">
+                        <h1>{{ eveent.title }}</h1>
+                        <h3>{{eveent.variantDescription}}</h3> 
+                        Total de Paginas: {{eveent.pageCount}}
+                    <hr/>
+                    {{eveent.description}}
+                 
+                    <button class="button-text" (click)="goEveent(eveent)">Voltar</button>
+                  </div>
+                  
+            </div>
+    </div><!--ngIf-->
+</div><!--container bg-->
