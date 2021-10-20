@@ -10,7 +10,7 @@ import { StoriesComponent } from './pages/stories/stories.component';
 const routes: Routes = [
   {
     path:'comics',
-    component: ComicsComponent
+    component: ComicsComponent, pathMatch: 'full' 
   },
   {
     path:'events',

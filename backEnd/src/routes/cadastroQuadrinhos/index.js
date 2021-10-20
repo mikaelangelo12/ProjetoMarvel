@@ -1,5 +1,5 @@
 module.exports = app =>{
-    app.get('/cadastroQuadrinho',(req, res)=>{
-        res.send("Cadastros de Quadrinhos")
+    app.get('/cadastroQuadrinho',(req, res) =>{
+       return res.json({mensage: "Cadastrar Quadrinho"})
     })
 }

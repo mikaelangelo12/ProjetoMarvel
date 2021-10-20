@@ -2,11 +2,17 @@ const express = require('express')
 const consign = require('consign')
 const bodyParser = require('body-parser')
 const db = require('../db/db')
-
+const cors = require('cors')
 module.exports = () =>{  
-    console.log(db)
+
     const app = express()
 
+    const corsOptions ={
+        origin: '*',
+        optionsSucessStatus: 200
+    }
+
+    app.use(cors(corsOptions));
 
     app.use(bodyParser.json())
     app.use(bodyParser.urlencoded({ extended: false }))
