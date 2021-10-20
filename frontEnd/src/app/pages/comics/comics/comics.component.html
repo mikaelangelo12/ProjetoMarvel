@@ -3,24 +3,23 @@
         <h1>Comics</h1>
         <img src="../assets/img/comics.jpg">
         <h2>Lista das Melhores Comics</h2>
-    </div>
-        <div *ngFor="let comic of comics$ | async" [class.selected]="comic.id === selectedId">
-              <div class="containerPost">
+    </div><!--headerPages-->
 
-                   <div class="thumbPost">
+        <div  class="custonFor "*ngFor="let comic of comics$ | async" [class.selected]="comic.id === selectedId">
+              <div class="containerPost col">
+                   <div class="thumbPost ">
                         <a [routerLink]="['/comic', comic.id]">
                             <img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
                         </a>
-                   </div>  
-                  <div class="conteudoPost">
+                   </div><!--thumbPost-->
+                  <div class="conteudoPost">                    
                     <a [routerLink]="['/comic', comic.id]">
-                      <span class="badge"></span>{{ comic.title }}
+                    <h1>{{ comic.title }}</h1>
                     </a>
+            
                     {{comic.description}}
                     {{comic.modified}}
-                  </div>
-                  <hr/>
-
-               </div>
-        </div>
-        <img src="./assets/img/navBar.png"
+                  </div><!--conteudoPost-->  
+               </div><!--containerPost-->
+               </div><!--NGFOR-->
+</div>

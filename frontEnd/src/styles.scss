@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: #F5FFFA ; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-image: url('./assets/img/bgMarvel.gif');}
+html, body { height: 100%; background-color: #131313 ; }
+body { 
+    position:relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: url('./assets/img/bgMarvel.gif'); 
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;}
 .bg{background-color: #fff;}
 
 .headerPages{
@@ -26,9 +36,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     width: 100%;
     max-width: 1264px;
 }
-.containerPost{
+.corpoPags{
     margin-top: 30px;
 }
+
+.thumbPost{
+    width:  250px!important;
+ 
+}
 .thumbPost img{
-    width: 250px;
+width: 250px!important;
+height: 350px!important;
+}
+.custonFor{
+    display:inline-block
+}
+.containerPost{
+    display:inline-block
+}
+.conteudoPost{
+    width: 220px;
+    text-decoration: none;
+    display:inline-block
+}
+.navBar{
+    display:inline-block;
+    width: 300px;
+   
 }
