@@ -1,14 +1,26 @@
 <div class="container bg">
-    <div class="headerCadastro">
+    <div class="headerPages">
         <h1>Comics</h1>
         <img src="../assets/img/comics.jpg">
+        <h2>Lista das Melhores Comics</h2>
     </div>
-    <h2>Lista das Melhores Series</h2>
         <div *ngFor="let comic of comics$ | async" [class.selected]="comic.id === selectedId">
-          <img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
-          <a [routerLink]="['/comic', comic.id]">
-            <span class="badge"></span>{{ comic.title }}
-          </a>
-          {{comic.description}}
-          {{comic.modified}}
+              <div class="containerPost">
+
+                   <div class="thumbPost">
+                        <a [routerLink]="['/comic', comic.id]">
+                            <img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
+                        </a>
+                   </div>  
+                  <div class="conteudoPost">
+                    <a [routerLink]="['/comic', comic.id]">
+                      <span class="badge"></span>{{ comic.title }}
+                    </a>
+                    {{comic.description}}
+                    {{comic.modified}}
+                  </div>
+                  <hr/>
+
+               </div>
         </div>
+        <img src="./assets/img/navBar.png"
