@@ -1,4 +1,4 @@
-export interface Comic {
+export interface Serie {
     id: number ;
     title: string;
     variantDescription: string;

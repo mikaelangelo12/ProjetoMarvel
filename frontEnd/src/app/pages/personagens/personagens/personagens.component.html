@@ -5,20 +5,20 @@
         <h2>Lista das Melhores Comics</h2>
     </div><!--headerPages-->
         <div class="postAjustes row  justify-content-md-center">
-        <div  class="custonFor col "*ngFor="let comic of comics$ | async" [class.selected]="comic.id === selectedId">
+        <div  class="custonFor col "*ngFor="let person of personagens$ | async" [class.selected]="person.id === selectedId">
               <div class="containerPost col-sm">
                    <div class="thumbPost ">
-                        <a [routerLink]="['/comic', comic.id]">
-                            <img class="img-thumbnail" src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}}>
+                        <a [routerLink]="['/personagem', person.id]">
+                            <img class="img-thumbnail" src={{person.thumbnail.path}}.{{person.thumbnail.extension}}>
                         </a>
                    </div><!--thumbPost-->
                   <div class="conteudoPost"> 
                     <div class="titlePostPages">            
-                            <a [routerLink]="['/comic', comic.id]">
-                                 <h1>{{ comic.title }}</h1>
+                            <a [routerLink]="['/personagem', person.id]">
+                                 <h1>{{ person.name }}</h1>
                             </a>   
                     </div>                
-                    <p>{{comic.description}}</p>
+                    <p>{{person.description}}</p>
 
                   </div><!--conteudoPost-->  
                </div><!--containerPost-->

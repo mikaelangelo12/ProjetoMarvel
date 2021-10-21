@@ -1,0 +1,23 @@
+<div class="container bg">
+    <div *ngIf="personagem$ | async as person" class="descricao">
+          <div class="headerPages">
+                  <h1><a  (click)="goPersonagens(person)">{{ person.name }}</a></h1>
+                  <img src="../assets/img/personagens.jpg">
+          </div><!--headerPages-->
+          <div class="containerPostDetalhes d-flex">
+                  <div class="thumbConteudoPost">
+                        <img class="img-thumbnail" src={{person.thumbnail.path}}.{{person.thumbnail.extension}}>
+                  </div>
+                  <div class="conteudoPostDetalhes">
+                        <h1>{{ person.name }}</h1>
+                        <h3>{{person.variantDescription}}</h3> 
+                        Total de Paginas: {{person.pageCount}}
+                    <hr/>
+                    {{person.description}}
+                 
+                    <button class="button-text" (click)="goPersonagens(person)">Voltar</button>
+                  </div>
+                  
+            </div>
+    </div><!--ngIf-->
+</div><!--container bg-->

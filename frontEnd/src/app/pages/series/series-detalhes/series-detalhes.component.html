@@ -1,0 +1,23 @@
+<div class="container bg">
+    <div *ngIf="serie$ | async as serie" class="descricao">
+          <div class="headerPages">
+                  <h1><a  (click)="goSeries(serie)">{{ serie.title }}</a></h1>
+                  <img src="../assets/img/comics.jpg">
+          </div><!--headerPages-->
+          <div class="containerPostDetalhes d-flex">
+                  <div class="thumbConteudoPost">
+                        <img class="img-thumbnail" src={{serie.thumbnail.path}}.{{serie.thumbnail.extension}}>
+                  </div>
+                  <div class="conteudoPostDetalhes">
+                        <h1>{{ serie.title }}</h1>
+                        <h3>{{serie.variantDescription}}</h3> 
+                        Total de Paginas: {{serie.pageCount}}
+                    <hr/>
+                    {{serie.description}}
+                 
+                    <button class="button-text" (click)="goSeries(serie)">Voltar</button>
+                  </div>
+                  
+            </div>
+    </div><!--ngIf-->
+</div><!--container bg-->

@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ComicsComponent } from './comics/comics/comics.component';
-import { EventsComponent } from './events/events.component';
-import { SeriesComponent } from './series/series.component';
-import { StoriesComponent } from './stories/stories.component';
-import { PersonagensComponent } from './personagens/personagens.component';
 import { CadastroQuadrinhosComponent } from './cadastro-quadrinhos/cadastro-quadrinhos.component';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -16,16 +11,21 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import { ComicsModule } from './comics/comics.module';
 
+import { EventsModule } from './events/events.module';
+import { PersonagensModule } from './personagens/personagens.module';
+import { SeriesModule } from './series/series.module';
+
+
 @NgModule({
-  declarations: [
-    EventsComponent,
-    SeriesComponent,
-    StoriesComponent,
-    PersonagensComponent,
-    CadastroQuadrinhosComponent,    
+  declarations: [   
+        CadastroQuadrinhosComponent,
+
   ],
   imports: [
     ComicsModule,
+    PersonagensModule,
+    EventsModule,
+    SeriesModule,    
     CommonModule,
     MatToolbarModule,
     MatIconModule,
@@ -34,6 +34,6 @@ import { ComicsModule } from './comics/comics.module';
     MatSelectModule,
     MatButtonModule
   ],
-  exports:[ EventsComponent, SeriesComponent, StoriesComponent, CadastroQuadrinhosComponent]
+  exports:[ CadastroQuadrinhosComponent]
 })
 export class PagesModule { }

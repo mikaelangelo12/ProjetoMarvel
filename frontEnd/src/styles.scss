@@ -1,8 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: #F5FFFA ; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-image: url('./assets/img/bgMarvel.gif');}
-.bg{background-color: #fff;}
+html, body { height: 100%; background-color: #131313 ; }
+body { 
+    position:relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: url('./assets/img/bgMarvel.gif'); 
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;}
+a{
+    color: #000;
+    text-decoration: none;
+}
+.bg{background-color: #fff;-webkit-box-shadow: 0px 2px 9px 1px rgba(0,0,0,0.84); 
+    box-shadow: 0px 2px 9px 1px rgba(0,0,0,0.84);}
+
+/**Conteudo Iniciao do App**/
 
 .headerPages{
     display: flex;
@@ -26,9 +43,101 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     width: 100%;
     max-width: 1264px;
 }
-.containerPost{
+.corpoPags{
     margin-top: 30px;
 }
+
+.thumbPost{
+    width:  250px!important;
+ 
+}
+.postAjustes{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row>*{
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
 .thumbPost img{
-    width: 250px;
+width: 250px!important;
+height: 350px!important;
+border: none;
+background: #131313;
+
+}
+.thumbPost img:hover{
+    opacity: 0.9;
+    background-color: #f80000;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.35); 
+box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.35);
+}
+.custonFor{
+
+}
+.containerPost{
+
+}
+.conteudoPost{
+    background-color: #eeeeee;   
+
+    width: 250px;    
+}
+.titlePostPages{
+    background-color: #f3f3f3;
+    
+    align-items: center;
+    padding: 1px;
+    margin-top: -5px;
+    border-bottom: 1px #c5c5c5 solid;
+
+}
+.titlePostPages:hover{
+    background-color: #f80000;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.35); 
+box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.35);
+    transition: 0.5ms;
+}
+.conteudoPost h1{
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+.conteudoPost h1:hover{
+
+}
+.conteudoPost p{
+color: rgb(0, 0, 0);
+text-align: center;
+padding: 3px;
+
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+/**Detalhes Dos Postes**/
+.containerPostDetalhes{
+    margin-top: 30px;
+}
+.thumbConteudoPost{
+    margin-right: 30px;
+}
+.thumbConteudoPost img{
+    width: 300px!important;
+
+}
+.conteudoPostDetalhes{
+    width: 70%;
+}
+
+.conteudoPostDetalhes h1{
+    font-size: 2.5em;
+    line-height: 1.2em;
+    margin-top: 5px;
+    font-weight: 700;
 }

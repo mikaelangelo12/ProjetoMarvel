@@ -1,6 +1,6 @@
-export interface Comic {
+export interface Person {
     id: number ;
-    title: string;
+    name: string;
     variantDescription: string;
     description: string;
     thumbnail: any;

@@ -1,9 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { API_PATH } from 'src/environments/environment';
 import { Comic } from './comic';
 
 @Injectable({
@@ -11,11 +8,9 @@ import { Comic } from './comic';
 })
 export class ComicsService {
 
-//  URL_API = 'https://gateway.marvel.com/v1/public/comics?ts=thesoer&apikey=001ac6c73378bbfff488a36141458af2&hash=72e5ed53d1398abb831c3ceec263f18b';
-  URL_API = 'http://localhost:3000/api/comics'
-    constructor(private http: HttpClient) {  
-     // this.listaSerie = [{id:1, title:"Mikael", thumbnail:"http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"},this.http.get<Comic[]>(`${API_PATH}`)]
-    }
+URL_API = 'https://gateway.marvel.com/v1/public/comics?ts=thesoer&apikey=001ac6c73378bbfff488a36141458af2&hash=72e5ed53d1398abb831c3ceec263f18b';
+  //URL_API = 'http://localhost:3000/api/comics'
+    constructor(private http: HttpClient) {}
     
 
   listaComics(){  
