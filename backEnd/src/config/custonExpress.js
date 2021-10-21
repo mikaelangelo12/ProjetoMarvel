@@ -1,7 +1,10 @@
 const express = require('express')
+const router = express.Router();
 const consign = require('consign')
 const bodyParser = require('body-parser')
 const db = require('../db/db')
+require('dotenv').config()
+
 const cors = require('cors')
 module.exports = () =>{  
 
@@ -15,7 +18,7 @@ module.exports = () =>{
     app.use(cors(corsOptions));
 
     app.use(bodyParser.json())
-    app.use(bodyParser.urlencoded({ extended: false }))
+    app.use(bodyParser.urlencoded({ extended: true }))
 
     consign()
         .include('src/routes/cadastroQuadrinhos')

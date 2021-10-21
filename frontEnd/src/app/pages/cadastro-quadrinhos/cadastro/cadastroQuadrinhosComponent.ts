@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
+import { CadastroQuadrinhoService } from '../cadastro-quadrinho.service';
 
 
 
@@ -10,24 +11,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./cadastro-quadrinhos.component.scss']
 })
 
-
 export class CadastroQuadrinhosComponent implements OnInit {
-  form: FormGroup | undefined;
+      cadastro: FormGroup | any;
+      constructor(private service: CadastroQuadrinhoService) { }
 
-  constructor(private fb: FormBuilder) { }
+      ngOnInit() {  }
 
-  ngOnInit() {
-    this.form = this.fb.group({
-      title: [null, [Validators.required, Validators.minLength(3)]]
-    });
-  }
+      criar() {
+        this.service.criar(this.cadastro.value).subscribe(resposta => {
+          this.cadastro.push(resposta);
+    
+          this.cadastro.reset();
+        });
+      }
+      }
+    
 
-
-  transferir() {
-    console.log('Solicitada nova transferência');
-
-  }
-
-
-
-}

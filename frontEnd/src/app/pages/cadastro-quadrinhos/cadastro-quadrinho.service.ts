@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class CadastroQuadrinhoService {
 
-  constructor() { }
+  URL_API = 'http://localhost:3000/api/cadastroQuadrinho';
+
+  constructor(private http: HttpClient) { }
+ 
+  criar(cadastro: any) {
+    return this.http.post(this.URL_API, cadastro);
+  }
 }

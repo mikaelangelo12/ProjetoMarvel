@@ -1,17 +1,19 @@
-const { MongoClient } = require('mongodb')
+const mongoose = require('mongoose')
 
-const uri = "mongodb://localhost:8081/mikael"
-const client = new MongoClient(uri)
+const {DB_USER, DB_PASS, DB_HOST, DB_PORT, DB_NAME} = process.env
 
+mongoose.connect(
+    `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?auth`
+)
 
-    async function run(){
-        try{
-            await client.connect()
-            console.log('Conectando ao MongoDB!')
-        } catch (err) {
-            console.log("Deu um erro na conexão ao MongoDB: %s", err)
-        }
-    }
-    run()
-
-module.exports = client
+/*
+const MongoClient  = require('mongodb').MongoClient;
+MongoClient.connect("mongodb://admin:example@localhost:2700",
+                                    {useUnifiedTopology: true},
+                                    (error, connection) =>{
+                                        if(error) return console.log('Deu um pequeno erro em %s',error);
+                                        global.connection = connection.db("marvel")
+                                        console.log("Conectado no Mongo")
+                                    } );
+*/
+module.exports = {}
