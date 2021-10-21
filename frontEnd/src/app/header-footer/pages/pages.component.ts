@@ -12,7 +12,7 @@ export class PagesComponent implements OnInit {
   conteudoEvents = "Events"
   conteudoPersonagens = "Personagens"
   conteudoSeries = "Series"
-  conteudoStories = "Stories"
+  conteudoMeusQuadrinhos = "Meus Quadrinhos"
   conteudoCadastroQuadrinhos = "Cadastro de Quadrinhos"
   
   constructor(private router: Router) { }
@@ -32,8 +32,8 @@ export class PagesComponent implements OnInit {
   goSeries(){
     this.router.navigate(['series'])
   }
-  goStories(){
-    this.router.navigate(['stories'])
+  goMeusQuadrinhos(){
+    this.router.navigate(['meus-quadrinhos'])
   }
   goCadastroQuadrinhos(){
     this.router.navigate(['cadastro-quadrinhos'])

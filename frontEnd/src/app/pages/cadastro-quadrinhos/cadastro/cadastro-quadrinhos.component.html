@@ -1,0 +1,43 @@
+<div class="container bg">
+
+  <div class="headerCadastro">
+    <h1>Cadastrar Novo Quadrinho</h1>
+    <img src="../assets/img/cadastrarQuadrinhos.jpg">
+  </div>
+  <!--action="/pagina-processa-dados-do-form" method="post"-->
+  <form class="formulario" >
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Titulo:</span>
+
+      <input type="text" class="form-control" placeholder="Nome do Quadrinho" aria-label="Username"
+        aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group">
+      <span class="input-group-text">Descrição:</span>
+      <textarea class="form-control" placeholder="Descrição do Quadrinho"
+        aria-label="Descrição do Quadrinho"></textarea>
+      <br />
+    </div>
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+      <select class="form-select" id="inputGroupSelect01">
+
+        <option selected>Selecionar Categoria</option>
+        <option valor="comic">Comics</option>
+        <option valor="events">Events</option>
+        <option valor="personagem">Personagem</option>
+        <option valor="series">Series</option>
+      </select>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Preço $:</span>
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <span class="input-group-text">.00</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupFile01">Capa do Quadrinho:</label>
+      <input type="file" class="form-control" id="inputGroupFile01">
+    </div>
+    <button type="button" class="btn btn-danger" type="submit">Danger</button>
+  </form>
