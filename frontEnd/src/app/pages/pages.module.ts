@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CadastroQuadrinhosComponent } from './cadastro-quadrinhos/cadastro-quadrinhos.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -14,15 +13,17 @@ import { ComicsModule } from './comics/comics.module';
 import { EventsModule } from './events/events.module';
 import { PersonagensModule } from './personagens/personagens.module';
 import { SeriesModule } from './series/series.module';
+import { CadastroQuadrinhoModule } from './cadastro-quadrinhos/cadastro-quadrinho.module';
 
 
 @NgModule({
   declarations: [   
-        CadastroQuadrinhosComponent,
+
 
   ],
   imports: [
     ComicsModule,
+    CadastroQuadrinhoModule,
     PersonagensModule,
     EventsModule,
     SeriesModule,    
@@ -34,6 +35,6 @@ import { SeriesModule } from './series/series.module';
     MatSelectModule,
     MatButtonModule
   ],
-  exports:[ CadastroQuadrinhosComponent]
+  exports:[ ]
 })
 export class PagesModule { }
