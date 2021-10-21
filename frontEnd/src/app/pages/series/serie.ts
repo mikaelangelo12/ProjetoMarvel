@@ -1,6 +1,6 @@
-export interface Person {
+export interface Serie {
     id: number ;
-    name: string;
+    title: string;
     variantDescription: string;
     description: string;
     thumbnail: any;

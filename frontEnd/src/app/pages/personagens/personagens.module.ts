@@ -4,7 +4,9 @@ import { PersonagensService } from './personagens.service';
 import { PersonagensDetalhesComponent } from './personagens-detalhes/personagens-detalhes.component';
 import { PersonagensComponent } from './personagens/personagens.component';
 import { FormsModule } from '@angular/forms';
+
 import { ComicsRoutingModule } from '../comics/comics-routing.module';
+import { PersonagensRoutingModule } from './personagens-routing.module';
 
 
 
@@ -16,7 +18,8 @@ import { ComicsRoutingModule } from '../comics/comics-routing.module';
   imports: [
     CommonModule,
     FormsModule,
-    ComicsRoutingModule,
+    
+    PersonagensRoutingModule,
   ],
   providers:[PersonagensService]
 })

@@ -5,7 +5,6 @@ import { ComicsComponent } from './pages/comics/comics/comics.component';
 import { EventsComponent } from './pages/events/events/events.component';
 import { PersonagensComponent } from './pages/personagens/personagens/personagens.component';
 import { SeriesComponent } from './pages/series/series/series.component';
-import { StoriesComponent } from './pages/stories/stories/stories.component';
 
 const routes: Routes = [
   {
@@ -23,10 +22,6 @@ const routes: Routes = [
   {
     path:'series',
     component: SeriesComponent
-  },
-  {
-    path:'stories',
-    component: StoriesComponent
   },
   {
     path:'cadastro-quadrinhos',

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { Serie } from '../serie';
+import { SeriesService } from '../series.service';
 
 @Component({
   selector: 'app-series',
@@ -6,10 +11,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./series.component.scss']
 })
 export class SeriesComponent implements OnInit {
+  
+  series$!: Observable<Serie[]>;
+  selectedId = 0; 
 
-  constructor() { }
+  constructor( private route: ActivatedRoute, private seriesService:SeriesService ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  
+      this.series$ = this.route.paramMap.pipe(
+        switchMap(params => {
+          this.selectedId = parseInt(params.get('id')!, 20);
+          return this.seriesService.listaSeries();
+        })
+      );
   }
 
-}
+  }
+  

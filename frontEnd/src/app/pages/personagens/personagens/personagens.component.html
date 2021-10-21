@@ -1,8 +1,27 @@
 <div class="container bg">
+    <div class="headerPages">
+        <h1>Comics</h1>
+        <img src="../assets/img/comics.jpg">
+        <h2>Lista das Melhores Comics</h2>
+    </div><!--headerPages-->
+        <div class="postAjustes row  justify-content-md-center">
+        <div  class="custonFor col "*ngFor="let person of personagens$ | async" [class.selected]="person.id === selectedId">
+              <div class="containerPost col-sm">
+                   <div class="thumbPost ">
+                        <a [routerLink]="['/personagem', person.id]">
+                            <img class="img-thumbnail" src={{person.thumbnail.path}}.{{person.thumbnail.extension}}>
+                        </a>
+                   </div><!--thumbPost-->
+                  <div class="conteudoPost"> 
+                    <div class="titlePostPages">            
+                            <a [routerLink]="['/personagem', person.id]">
+                                 <h1>{{ person.name }}</h1>
+                            </a>   
+                    </div>                
+                    <p>{{person.description}}</p>
 
-    <div class="headerCadastro">
-        <h1>Personagens</h1>
-        <img src="../assets/img/personagens2.jpg">
-    </div>
-
+                  </div><!--conteudoPost-->  
+               </div><!--containerPost-->
+               </div><!--NGFOR-->
+            </div><!--postAjustes-->
 </div>

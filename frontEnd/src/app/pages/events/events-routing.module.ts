@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EventsComponent } from './events/events.component';
 import { EventsDetalhesComponent } from './events-detalhes/events-detalhes.component';
 
-const comicsRoutes: Routes = [
+const eventesRoutes: Routes = [
   { path: 'Events', redirectTo: '/events' },
   { path: 'Eveent/:id', redirectTo: '/eveent/:id' },
   { path: 'events',  component: EventsComponent},
@@ -15,7 +15,7 @@ const comicsRoutes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forChild(comicsRoutes),
+    RouterModule.forChild(eventesRoutes),
     CommonModule,
   ],
   exports:[

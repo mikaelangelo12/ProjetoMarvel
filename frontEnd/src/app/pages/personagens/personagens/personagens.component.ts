@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { Person } from '../person';
+import { PersonagensService } from '../personagens.service';
 
 @Component({
   selector: 'app-personagens',
@@ -7,9 +12,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonagensComponent implements OnInit {
 
-  constructor() { }
+  personagens$!: Observable<Person[]>;
+  selectedId = 0; 
 
-  ngOnInit(): void {
+  constructor( private route: ActivatedRoute, private personagensService: PersonagensService ) { }
+
+  ngOnInit() {
+  
+      this.personagens$ = this.route.paramMap.pipe(
+        switchMap(params => {
+          this.selectedId = parseInt(params.get('id')!, 300);
+          return this.personagensService.listaPersonagens();
+        })
+      );
   }
 
-}
+  }
+  
