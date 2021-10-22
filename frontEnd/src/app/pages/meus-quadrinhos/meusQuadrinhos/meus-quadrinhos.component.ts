@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { apiMarvel } from '../../marvelDadosApi';
+
 import { MeusQuadrinhosService } from '../meus-quadrinhos.service';
+import { meusDadosQuadrinho } from '../meusDados';
 
 @Component({
   selector: 'app-meus-quadrinhos',
@@ -13,7 +14,7 @@ import { MeusQuadrinhosService } from '../meus-quadrinhos.service';
 export class MeusQuadrinhosComponent implements OnInit {
 
   
-  meusQuadrinhos$!: Observable<apiMarvel[]>;
+  meusQuadrinhos$!: Observable<meusDadosQuadrinho[]>;
   selectedId = 0; 
 
   constructor( private route: ActivatedRoute, private meusQuadrinhosService: MeusQuadrinhosService ) { }

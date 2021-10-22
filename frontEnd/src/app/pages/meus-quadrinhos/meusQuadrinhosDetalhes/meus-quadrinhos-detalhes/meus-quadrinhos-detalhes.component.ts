@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { apiMarvel } from 'src/app/pages/marvelDadosApi';
+
 import { MeusQuadrinhosService } from '../../meus-quadrinhos.service';
+import { meusDadosQuadrinho } from '../../meusDados';
 
 @Component({
   selector: 'app-meus-quadrinhos-detalhes',
@@ -12,7 +13,7 @@ import { MeusQuadrinhosService } from '../../meus-quadrinhos.service';
 })
 export class MeusQuadrinhosDetalhesComponent implements OnInit {
 
-  quadrinho$!: Observable<apiMarvel>;
+  quadrinho$!: Observable<meusDadosQuadrinho>;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +31,7 @@ export class MeusQuadrinhosDetalhesComponent implements OnInit {
   );
 }
 
-goQuadrinho(quadrinho: apiMarvel) {
+goQuadrinho(quadrinho: meusDadosQuadrinho) {
   const quadrinhoId = quadrinho ? quadrinho.description : null;
 
   this.router.navigate(['/quadrinhos', { id: quadrinhoId, foo: 'foo' }]);
