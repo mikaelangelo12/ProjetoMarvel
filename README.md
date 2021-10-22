@@ -67,7 +67,7 @@ na pasta inicial do projeto atraves do terminal vamos rodar o seguinte comando:
 
 #### Confira o que será retornado quando dar um get atraves do link
 <img src="https://github.com/mikaelangelo12/meuPet/blob/master/apiMarvel.png?raw=true">
-###################### BackEnd ############################
+
 
 ## Como funciona o BackEnd
 o BackEnd foi criado com as seguintes bibliotecas e suas verções
