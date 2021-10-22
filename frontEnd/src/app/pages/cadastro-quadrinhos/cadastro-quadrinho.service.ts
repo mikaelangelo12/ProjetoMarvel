@@ -6,11 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class CadastroQuadrinhoService {
 
-  URL_API = 'http://localhost:3000/api/cadastroQuadrinho';
+  URL_API = 'http://localhost:3030/api/cadastroQuadrinho';
 
   constructor(private http: HttpClient) { }
  
-  criar(cadastro: any) {
-    return this.http.post(this.URL_API, cadastro);
+  criar(contato: any) {
+    return this.http.post(this.URL_API, contato);
   }
 }

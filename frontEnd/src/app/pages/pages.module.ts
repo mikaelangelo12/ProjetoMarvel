@@ -15,6 +15,7 @@ import { PersonagensModule } from './personagens/personagens.module';
 import { SeriesModule } from './series/series.module';
 import { CadastroQuadrinhoModule } from './cadastro-quadrinhos/cadastro-quadrinho.module';
 import { MeusQuadrinhosModule } from './meus-quadrinhos/meus-quadrinhos.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { MeusQuadrinhosModule } from './meus-quadrinhos/meus-quadrinhos.module';
     MatTabsModule,
     MatGridListModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[ ]
 })

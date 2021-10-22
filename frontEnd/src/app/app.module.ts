@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HeaderFooterModule,
     PagesModule,
@@ -34,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     RouterModule,
     BrowserAnimationsModule,  
-    FormsModule  
+
   ],
   providers: [],
   bootstrap: [AppComponent]
