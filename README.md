@@ -63,10 +63,11 @@ Depois do backEnd rodando tudo certinho, vamos rodar o frontEnd, vai para dentro
 
 #### Apôs o cadastro é feito, os dados ira para pagina Meus Quadrinhos.
 <img src="https://github.com/mikaelangelo12/meuPet/blob/master/projetoMavelmeusQUadrinhos.png?raw=true">
-#### O FrontEnd está consulmindo ApiRest que foi criada com NodeJS cada pagina tem uma API Propria, puxando dados atraves do arquivo service.ts, onde cada pagina tem sua propria service para poder consulmir os dados do BackEnd de forma independente o link para acessa api, basta dar um get no link http://localhost:3030/api/events,
+#### O FrontEnd está consulmindo ApiRest que foi criada com NodeJS cada pagina tem uma API Propria, puxando dados atraves do arquivo service.ts, cada pagina em um service excluvio para poder consulmir os dados do BackEnd de forma independente. O link para acessa api, basta dar um get no link http://localhost:3030/api/events onde irá retornar um monte de array.
+
 #### Confira o que será retornado quando dar um get atraves do link
 <img src="https://github.com/mikaelangelo12/meuPet/blob/master/apiMarvel.png?raw=true">
-
+###################### BackEnd ############################
 
 
 
