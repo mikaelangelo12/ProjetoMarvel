@@ -1,8 +1,9 @@
 <div class="container bg">
     <div *ngIf="eveent$ | async as eveent" class="descricao">
           <div class="headerPages">
-                  <h1><a  (click)="goEveent(eveent)">{{ eveent.title }}</a></h1>
+                  <h1><a  (click)="goEveent(eveent)">Events</a></h1>
                   <img src="../assets/img/events.jpg">
+                  <h2>Lista dos Melhores Events</h2>
           </div><!--headerPages-->
           <div class="containerPostDetalhes d-flex">
                   <div class="thumbConteudoPost">
@@ -10,8 +11,10 @@
                   </div>
                   <div class="conteudoPostDetalhes">
                         <h1>{{ eveent.title }}</h1>
+                        <div class="d-flex  justify-content-between">
                         <h3>{{eveent.variantDescription}}</h3> 
                         Total de Paginas: {{eveent.pageCount}}
+                        </div>
                     <hr/>
                     {{eveent.description}}
                  

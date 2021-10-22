@@ -1,0 +1,27 @@
+<div class="container bg">
+    <div class="headerPages">
+        <h1>Meus Quadrinhos</h1>
+        <img src="../assets/img/comics.jpg">
+        <h2>Lista de todos os quadrinhos </h2>
+    </div><!--headerPages-->
+        <div class="postAjustes row  justify-content-md-center">
+        <div  class="custonFor col "*ngFor="let quadrinhos of meusQuadrinhos$ | async" [class.selected]="quadrinhos.id === selectedId">
+              <div class="containerPost col-sm">
+                   <div class="thumbPost">
+                        <a [routerLink]="['/quadrinho', quadrinhos.id]">
+                            <img class="img-thumbnail" src={{quadrinhos.thumbnail}}>
+                        </a>
+                   </div><!--thumbPost-->
+                  <div class="conteudoPost"> 
+                    <div class="titlePostPages">            
+                            <a [routerLink]="['/quadrinho', quadrinhos.id]">
+                                 <h1>{{ quadrinhos.nome }}</h1>
+                            </a>   
+                    </div>                
+                    <p>{{quadrinhos.descricao}}</p>
+
+                  </div><!--conteudoPost-->  
+               </div><!--containerPost-->
+               </div><!--NGFOR-->
+            </div><!--postAjustes-->
+</div>

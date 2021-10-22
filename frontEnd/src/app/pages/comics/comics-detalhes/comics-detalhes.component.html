@@ -1,8 +1,9 @@
 <div class="container bg">
       <div *ngIf="comic$ | async as comic" class="descricao">
             <div class="headerPages">
-                    <h1><a  (click)="goComics(comic)">{{ comic.title }}</a></h1>
+                    <h1><a  (click)="goComics(comic)">Comics</a></h1>
                     <img src="../assets/img/comics.jpg">
+                    <h2>Lista das Melhores Comics</h2>
             </div><!--headerPages-->
             <div class="containerPostDetalhes d-flex">
                     <div class="thumbConteudoPost">
@@ -10,11 +11,12 @@
                     </div>
                     <div class="conteudoPostDetalhes">
                           <h1>{{ comic.title }}</h1>
+                          <div class="d-flex  justify-content-between">
                           <h3>{{comic.variantDescription}}</h3> 
                           Total de Paginas: {{comic.pageCount}}
+                        </div>
                       <hr/>
-                      {{comic.description}}
-                   
+                      {{comic.description}}                   
                       <button class="button-text" (click)="goComics(comic)">Voltar</button>
                     </div>
                     

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Eveent } from '../events';
+import { apiMarvel } from '../../marvelDadosApi';
 import { EventsService } from '../events.service';
 
 @Component({
@@ -13,7 +13,7 @@ import { EventsService } from '../events.service';
 export class EventsComponent implements OnInit {
 
   
-  events$!: Observable<Eveent[]>;
+  events$!: Observable<apiMarvel[]>;
   selectedId = 0; 
 
   constructor( private route: ActivatedRoute, private events: EventsService ) { }

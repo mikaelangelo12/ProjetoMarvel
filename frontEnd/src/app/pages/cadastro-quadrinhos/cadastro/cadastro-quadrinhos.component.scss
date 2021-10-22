@@ -1,17 +1,35 @@
-.headerCadastro{
-    display: flex;
+.containerCadastro{
+    margin-top: 30px;
+}
+.custonDescrcao{
+    margin-bottom: 20px;
+}
+.btnContainer{    
+    display:flex;
     align-items: center;
     justify-content: center;
-    padding-top: 5px;
+    padding-bottom: 20px;
 }
-.headerCadastro h1{
-    position: absolute;
-    color: #fff;
-    font-weight: 700;
-    font-size: 3em;
-    margin-top:30px ;    
+.custonBtn{
+    background-color: red;
+    border: none;
+    width: 300px;
+    font-weight: 500;
+    border-radius: 10px;
+
 }
-.headerCadastro img {
-    width: 100%;
-    max-width: 1264px;
+.input-group-text{
+    background-color: #ff1100!important;
+    border: 1px solid #000000!important;
+    color: #fff!important;
+    font-weight: 500;
+    border-radius: 10px 0 0 10px    !important;
+}
+.form-select{
+    border: 1px solid #000000!important;
+    border-radius:0 10px 10px 0    !important;
+}
+.form-control{
+    border: 1px solid #000000!important;
+    border-radius:0 10px 10px 0    !important;
 }

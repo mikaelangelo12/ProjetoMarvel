@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Eveent } from '../events';
+import { apiMarvel } from '../../marvelDadosApi';
+
 import { EventsService } from '../events.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { EventsService } from '../events.service';
   styleUrls: ['./events-detalhes.component.scss']
 })
 export class EventsDetalhesComponent implements OnInit {
-  eveent$!: Observable<Eveent>;
+  eveent$!: Observable<apiMarvel>;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,7 +30,7 @@ export class EventsDetalhesComponent implements OnInit {
   );
 }
 
-goEveent(eveent: Eveent) {
+goEveent(eveent: apiMarvel) {
   const eveentId = eveent ? eveent.description : null;
 
   this.router.navigate(['/events', { id: eveentId, foo: 'foo' }]);

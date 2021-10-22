@@ -1,6 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CadastroQuadrinhoService } from '../cadastro-quadrinho.service';
+
 
 
 
@@ -12,18 +14,34 @@ import { CadastroQuadrinhoService } from '../cadastro-quadrinho.service';
 })
 
 export class CadastroQuadrinhosComponent implements OnInit {
-      cadastro: FormGroup | any;
-      constructor(private service: CadastroQuadrinhoService) { }
+  form!: FormGroup;
 
-      ngOnInit() {  }
+  constructor(private service: CadastroQuadrinhoService, private fb: FormBuilder) { }
+      
+      ngOnInit() {  
+        this.form = this.fb.group({
+          nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+          descricao: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+          category: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+          preco: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+          thumbnail: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+        })
+      }
 
-      criar() {
-        this.service.criar(this.cadastro.value).subscribe(resposta => {
-          this.cadastro.push(resposta);
-    
-          this.cadastro.reset();
-        });
-      }
-      }
+     onSubmit(){
+       console.log(this.form.value)
+       if(this.form.valid){
+         console.log('submit')
+         this.service.create(this.form.value).subscribe(
+                  success => console.log(success),
+                  error => console.error(error),
+           () => {
+             return console.log('request completo');
+           }
+         );
+       }
+     }
+
+}
     
 

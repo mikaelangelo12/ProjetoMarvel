@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, PagesComponent],
@@ -17,7 +18,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatTabsModule,
     MatDialogModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports:[HeaderComponent, FooterComponent, PagesComponent]
 })

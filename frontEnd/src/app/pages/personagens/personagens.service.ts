@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Person } from './person';
+import { apiMarvel } from '../marvelDadosApi';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +14,13 @@ export class PersonagensService {
     
 
   listaPersonagens(){  
-    return this.http.get<Person[]>(this.URL_API)
+    return this.http.get<apiMarvel[]>(this.URL_API)
     .pipe(map((data: any)=> data.data.results))
   } 
 
   listaPersonagem(id:  number | string)  {
     return this.listaPersonagens().pipe(
-      map((personagens: Person[]) => personagens.find(personagem => personagem.id === +id)!)
+      map((personagens: apiMarvel[]) => personagens.find(personagem => personagem.id === +id)!)
     );
    }
    

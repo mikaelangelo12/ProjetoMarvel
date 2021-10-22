@@ -2,4 +2,12 @@ footer{
     background-color: #202020;
     height: 80px;
     color: #fff;
+    display: flex;
+    align-items: center;
+
+}
+.copy{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
 }

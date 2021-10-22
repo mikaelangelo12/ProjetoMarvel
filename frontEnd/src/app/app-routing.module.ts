@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroQuadrinhosComponent } from "./pages/cadastro-quadrinhos/cadastro/cadastroQuadrinhosComponent";
 import { ComicsComponent } from './pages/comics/comics/comics.component';
 import { EventsComponent } from './pages/events/events/events.component';
-import { MeusQuadrinhosComponent } from './pages/meus-quadrinhos/meus-quadrinhos.component';
+import { MeusQuadrinhosComponent } from './pages/meus-quadrinhos/meusQuadrinhos/meus-quadrinhos.component';
 import { PersonagensComponent } from './pages/personagens/personagens/personagens.component';
 import { SeriesComponent } from './pages/series/series/series.component';
 
@@ -14,23 +14,23 @@ const routes: Routes = [
   },
   {
     path:'events',
-    component: EventsComponent
+    component: EventsComponent, pathMatch: 'full' 
   },
   {
     path:'personagens',
-    component: PersonagensComponent
+    component: PersonagensComponent, pathMatch: 'full' 
   },
   {
     path:'series',
-    component: SeriesComponent
+    component: SeriesComponent, pathMatch: 'full' 
   },
   {
     path:'cadastro-quadrinhos',
-    component: CadastroQuadrinhosComponent
+    component: CadastroQuadrinhosComponent, pathMatch: 'full' 
   },
   {
     path:'meus-quadrinhos',
-    component: MeusQuadrinhosComponent
+    component: MeusQuadrinhosComponent, pathMatch: 'full' 
   },
 ];
 

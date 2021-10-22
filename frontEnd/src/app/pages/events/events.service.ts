@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Eveent } from './events';
+import { apiMarvel } from '../marvelDadosApi';
+
 
 
 @Injectable({
@@ -15,13 +16,13 @@ URL_API = 'https://gateway.marvel.com/v1/public/events?ts=thesoer&apikey=001ac6c
     
 
   listaEvents(){  
-    return this.http.get<Eveent[]>(this.URL_API)
+    return this.http.get<apiMarvel[]>(this.URL_API)
     .pipe(map((data: any)=> data.data.results))
   } 
 
   listaEvent(id:  number | string)  {
     return this.listaEvents().pipe(
-      map((events: Eveent[]) => events.find(eveent => eveent.id === +id)!)
+      map((events: apiMarvel[]) => events.find(eveent => eveent.id === +id)!)
     );
    }
    

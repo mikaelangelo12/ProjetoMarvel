@@ -1,41 +1,45 @@
 <div class="container bg">
 
-  <div class="headerCadastro">
+  <div class="headerPages">
     <h1>Cadastrar Novo Quadrinho</h1>
     <img src="../assets/img/cadastrarQuadrinhos.jpg">
   </div>
-  <!--action="/pagina-processa-dados-do-form" method="post"-->
-  <form method="post" (ngSubmit)="criar()" [formGroup]="cadastro">
-            <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Titulo:</span>
-                    <input type="text" class="form-control" placeholder="Nome do Quadrinho" aria-label="TituloHQ"
-                      aria-describedby="basic-addon1"name="title"  formControlName="Name"/>
-            </div>
-            <div class="input-group">
-                  <span class="input-group-text">Descrição:</span>
-                  <textarea class="form-control" placeholder="Descrição do Quadrinho"
-                    aria-label="Descrição do Quadrinho" formControlName="descricao"></textarea>
-            </div>
-            <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
-                    <select class="form-select" id="inputGroupSelect01">
+  <div class="containerCadastro">
+  <section>
+      <form class="needs-validation" novalidate [formGroup]="form" method="post">
+        <div class="input-group mb-3  form-group">
+          <span class="input-group-text" id="basic-addon1">Titulo:</span>
+          <input type="text" class="form-control" placeholder="Nome do Quadrinho" aria-label="TituloHQ"
+            aria-describedby="basic-addon1" formControlName="nome" />
+        </div>
+        <div class="input-group custonDescrcao  form-group">
+          <span class="input-group-text">Descrição:</span>
+          <textarea class="form-control" placeholder="Descrição do Quadrinho"
+            aria-label="Descrição do Quadrinho" formControlName="descricao"></textarea>
+        </div>
+        <div class="input-group mb-3  form-group">
+          <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+          <select class="form-select" id="inputGroupSelect01" formControlName="category">
+            <option selected [value]="null">Selecionar Categoria</option>
+            <option   valor="comic">Comics</option>
+            <option  valor="events">Events</option>
+            <option  valor="personagem">Personagem</option>
+            <option valor="series">Series</option>
+          </select>
+        </div>
+        <div class="input-group mb-3  form-group">
+          <span class="input-group-text">Preço $:</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar) " formControlName="preco">
+          <span class="input-group-text">.00</span>
+        </div>
 
-                      <option selected>Selecionar Categoria</option>
-                      <option  formControlName="comic" valor="comic">Comics</option>
-                      <option  formControlName="events" valor="events">Events</option>
-                      <option  formControlName="personagem" valor="personagem">Personagem</option>
-                      <option  formControlName="series" valor="series">Series</option>
-                    </select>
-            </div>
-            <div class="input-group mb-3">
-                      <span class="input-group-text">Preço $:</span>
-                      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar) " formControlName="valor">
-                      <span class="input-group-text">.00</span>
-            </div>
-
-            <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupFile01">Capa do Quadrinho:</label>
-                    <input type="file" class="form-control" id="inputGroupFile01" formControlName="thumbnail">
-            </div>
-            <button type="submit" class="btn btn-primary" [disabled]="cadastro.invalid">Salvar</button>
-  </form>
+        <div class="input-group mb-3  form-group">
+          <label class="input-group-text" for="inputGroupFile01">Capa do Quadrinho:</label>
+          <input type="file" class="form-control" id="inputGroupFile01"formControlName="thumbnail">
+        </div>
+        <div class="btnContainer">
+          <button type="submit" class="btn btn-primary custonBtn" (click)="onSubmit()">Salvar</button>
+        </div>
+      </form>
+    </section>
+  </div>
