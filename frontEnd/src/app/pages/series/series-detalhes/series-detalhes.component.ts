@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Comic } from '../../comics/comic';
-import { Serie } from '../serie';
+import { apiMarvel } from '../../marvelDadosApi';
 import { SeriesService } from '../series.service';
 
 @Component({
@@ -13,7 +12,7 @@ import { SeriesService } from '../series.service';
 })
 export class SeriesDetalhesComponent implements OnInit {
   
-  serie$!: Observable<Serie>;
+  serie$!: Observable<apiMarvel>;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +30,7 @@ export class SeriesDetalhesComponent implements OnInit {
   );
 }
 
-goSeries(serie: Serie) {
+goSeries(serie: apiMarvel) {
   const comicId = serie ? serie.description : null;
 
   this.router.navigate(['/series', { id: comicId, foo: 'foo' }]);

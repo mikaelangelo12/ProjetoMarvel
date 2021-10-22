@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Comic } from '../comic';
+import { apiMarvel } from '../../marvelDadosApi';
 import { ComicsService } from '../comics.service';
 
 @Component({
@@ -13,7 +13,7 @@ import { ComicsService } from '../comics.service';
 export class ComicsComponent implements OnInit {
 
   
-  comics$!: Observable<Comic[]>;
+  comics$!: Observable<apiMarvel[]>;
   selectedId = 0; 
 
   constructor( private route: ActivatedRoute, private comicsService: ComicsService ) { }

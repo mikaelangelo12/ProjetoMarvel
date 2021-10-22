@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Person } from '../person';
+import { apiMarvel } from '../../marvelDadosApi';
 import { PersonagensService } from '../personagens.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { PersonagensService } from '../personagens.service';
 })
 export class PersonagensComponent implements OnInit {
 
-  personagens$!: Observable<Person[]>;
+  personagens$!: Observable<apiMarvel[]>;
   selectedId = 0; 
 
   constructor( private route: ActivatedRoute, private personagensService: PersonagensService ) { }

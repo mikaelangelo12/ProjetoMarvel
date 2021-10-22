@@ -14,6 +14,7 @@ import { EventsModule } from './events/events.module';
 import { PersonagensModule } from './personagens/personagens.module';
 import { SeriesModule } from './series/series.module';
 import { CadastroQuadrinhoModule } from './cadastro-quadrinhos/cadastro-quadrinho.module';
+import { MeusQuadrinhosModule } from './meus-quadrinhos/meus-quadrinhos.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { CadastroQuadrinhoModule } from './cadastro-quadrinhos/cadastro-quadrinh
   ],
   imports: [
     ComicsModule,
+    MeusQuadrinhosModule,
     CadastroQuadrinhoModule,
     PersonagensModule,
     EventsModule,

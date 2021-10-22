@@ -1,6 +1,7 @@
-export interface Eveent {
+export interface apiMarvel {
     id: number ;
     title: string;
+    name: string;
     variantDescription: string;
     description: string;
     thumbnail: any;

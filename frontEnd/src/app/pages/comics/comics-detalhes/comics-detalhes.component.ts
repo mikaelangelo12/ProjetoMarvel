@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Comic } from '../comic';
 import { ComicsService } from '../comics.service';
 import { switchMap } from 'rxjs/operators';
+import { apiMarvel } from '../../marvelDadosApi';
 
 @Component({
   selector: 'app-comics-detalhes',
@@ -13,7 +13,7 @@ import { switchMap } from 'rxjs/operators';
 
 export class ComicsDetalhesComponent implements OnInit {
   
-  comic$!: Observable<Comic>;
+  comic$!: Observable<apiMarvel>;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +31,7 @@ export class ComicsDetalhesComponent implements OnInit {
   );
 }
 
-goComics(comic: Comic) {
+goComics(comic: apiMarvel) {
   const comicId = comic ? comic.description : null;
 
   this.router.navigate(['/comics', { id: comicId, foo: 'foo' }]);

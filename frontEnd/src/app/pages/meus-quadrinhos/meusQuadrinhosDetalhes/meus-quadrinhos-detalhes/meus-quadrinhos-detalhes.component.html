@@ -1,0 +1,24 @@
+<div class="container bg">
+    <div *ngIf="quadrinho$ | async as quadrinho" class="descricao">
+          <div class="headerPages">
+                  <h1><a  (click)="goQuadrinho(quadrinho)">Meus Quadrinhos</a></h1>
+                  <img src="../assets/img/events.jpg">
+                  <h2>Lista de todos os quadrinhos Cadastrados</h2>
+          </div><!--headerPages-->
+          <div class="containerPostDetalhes d-flex">
+                  <div class="thumbConteudoPost">
+                        <img class="img-thumbnail" src={{quadrinho.thumbnail.path}}.{{quadrinho.thumbnail.extension}}>
+                  </div>
+                  <div class="conteudoPostDetalhes">
+                        <h1>{{ quadrinho.title }}</h1>
+                        <h3>{{quadrinho.variantDescription}}</h3> 
+                        Total de Paginas: {{quadrinho.pageCount}}
+                    <hr/>
+                    {{quadrinho.description}}
+                 
+                    <button class="button-text" (click)="goQuadrinho(quadrinho)">Voltar</button>
+                  </div>
+                  
+            </div>
+    </div><!--ngIf-->
+</div><!--container bg-->

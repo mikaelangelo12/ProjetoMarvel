@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Serie } from './serie';
+import { apiMarvel } from '../marvelDadosApi';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +14,13 @@ export class SeriesService {
     
 
   listaSeries(){  
-    return this.http.get<Serie[]>(this.URL_API)
+    return this.http.get<apiMarvel[]>(this.URL_API)
     .pipe(map((data: any)=> data.data.results))
   } 
 
   listaSerie(id:  number | string)  {
     return this.listaSeries().pipe(
-      map((series: Serie[]) => series.find(serie => serie.id === +id)!)
+      map((series: apiMarvel[]) => series.find(serie => serie.id === +id)!)
     );
    }
    

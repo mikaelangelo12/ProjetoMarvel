@@ -10,12 +10,14 @@
                   </div>
                   <div class="conteudoPostDetalhes">
                         <h1>{{ serie.title }}</h1>
+                        <div class="d-flex  justify-content-between">
                         <h3>{{serie.variantDescription}}</h3> 
                         Total de Paginas: {{serie.pageCount}}
+                        </div>
                     <hr/>
                     {{serie.description}}
                  
-                    <button class="button-text" (click)="goSeries(serie)">Voltar</button>
+                    <button class="button-text" (click)="goSeries(serie)">Voltar para á página anterior</button>
                   </div>
                   
             </div>
