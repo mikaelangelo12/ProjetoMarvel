@@ -13,17 +13,17 @@
 #### Primeiro vamos instalar o Angular CLi na maquina
 ##### => npm install -g @angular/cli
 
-Apôs a instalação do Angular proximo passo é gerar a pasta node_modules 
+#### Apôs a instalação do Angular proximo passo é gerar a pasta node_modules 
 #### FrontEnd => npm install express -save
 
-Apôs gerar a pasta node_modules, vamos gerar ela tambem para o backEnd
+#### Apôs gerar a pasta node_modules, vamos gerar ela tambem para o backEnd
 #### BackEnd => npm i
 
 ## Vamos colocar para rodar o nosso projeto
 
-Primeiro vamos rodar o BackEnd. O BackEnd tem duas opções para poder executar, a primeira para rodar nativo na maquina e a segunda opção e no modo de container no docker.
+#### Primeiro vamos rodar o BackEnd. O BackEnd tem duas opções para poder executar, a primeira para rodar nativo na maquina e a segunda opção e no modo de container no docker.
 
-Primeiro rodar o backend no modo nativo só bastar rodar:
+#### Primeiro rodar o backend no modo nativo só bastar rodar:
 
 #### => yarn start ou npm start
 
@@ -32,9 +32,9 @@ na pasta inicial do projeto atraves do terminal vamos rodar o seguinte comando:
 
 #### => make up
 
-Este comando vai criar as imagens do MongoDB e NodeJS.
+####  Este comando vai criar as imagens do MongoDB e NodeJS.
 
-Depois do backEnd rodando tudo certinho, vamos rodar o frontEnd, vai para dentro da pasta frontEnd/ vamos rodar o seguinte comando.
+#### Depois do backEnd rodando tudo certinho, vamos rodar o frontEnd, vai para dentro da pasta frontEnd/ vamos rodar o seguinte comando.
 
 #### => ng server
 
@@ -69,6 +69,50 @@ Depois do backEnd rodando tudo certinho, vamos rodar o frontEnd, vai para dentro
 <img src="https://github.com/mikaelangelo12/meuPet/blob/master/apiMarvel.png?raw=true">
 ###################### BackEnd ############################
 
+## Como funciona o BackEnd
+o BackEnd foi criado com as seguintes bibliotecas e suas verções
 
+####   "axios": "^0.23.0",
+####    "body-parser": "^1.19.0",
+####    "consign": "^0.1.6",
+####    "cors": "^2.8.5",
+####    "express": "^4.17.1",
+####    "express-handlebars": "^5.3.4",
+####    "mongodb": "^4.1.3",
+####    "mongoose": "^6.0.11"
 
+### Eu ultilizei a biblioteca axios para me dar acesso ao link da api Marvel.
+### Eu ultilizei a biblioteca body-parser para joga tudo isso em um objeto dentro do objeto de requisição (req): req. body, para poder salvar os dados do cadastro.
+### Eu ultilizei a biblioteca Consign é para facilitar o gerenciamento das rotas no express, onde eu ultilizei para dar acesso todas as paginas.
+
+#####    consign()
+#####        .include('src/routes/cadastroQuadrinhos')
+#####        .include('src/routes/comics')
+#####        .include('src/routes/events')
+#####        .include('src/routes/personagens')
+#####        .include('src/routes/series')
+#####        .include('src/routes/stories')
+#####        .into(app)
+#####    return app
+### Eu utilizei a biblioteca cors para burla o firewall do navegador, para conseguir acessa o meu backEnd no FrontEnd.
+
+## o que são cada pasta criada no projeto
+
+### A pasta config/custonExpress foi criada para ter uma pagina express customizada para ter mais facilidade no desenvolvimento.
+### A pasta db onde fica toda as configurações do banco de dados, como coneção com mongoDB e poder fazer o get e post nos produtos salvo atraves do cadastro
+### A pasta routes ela contem todas as pagina da api, Comics, Events, personagens, series e cadastros. Estas paginas contem todas as rotas para acesso a api
+
+### e por fim foi ultilizado o dotenv para poder fazer a conexão dos dados no mongoDB e no Docker
+NODE_ENV=development
+
+### # Servidor
+### SERVER_PORT=8000
+
+#### #Banco de Dados
+
+#### DB_HOST=db
+#### DB_PORT=27017
+#### DB_NAME=nodeauth
+#### DB_USER=nodeauth
+#### DB_PASS=nodeauth
 
